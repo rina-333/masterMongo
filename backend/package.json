@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node --experimental-specifier-resolution=node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --experimental-specifier-resolution=node index.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' DOTENV_CONFIG_PATH=./.env.development jest --bail --verbose --detectOpenHandles --maxWorkers=2",
+    "test:cov": "NODE_OPTIONS='--experimental-vm-modules' DOTENV_CONFIG_PATH=./.env.development jest --bail --verbose --detectOpenHandles --maxWorkers=2 --coverage"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0"
+  }
+}
